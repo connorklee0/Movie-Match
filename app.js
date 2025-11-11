@@ -8,8 +8,8 @@ const resultsHeader = document.querySelector('.results__header--search')
 const searchInput = document.getElementById('search--input')
 
 // navigation and alert
-const navigateHome = () => window.location.href = '/index.html';
-const navigateSearch = () => window.location.href = '/movies.html';
+const navigateHome = () => window.location.href = 'index.html';
+const navigateSearch = () => window.location.href = 'movies.html';
 const throwAlert = () => alert('Feature not yet implemented');
 
 searchBar.addEventListener('submit', (event) => {
@@ -64,4 +64,6 @@ function movieHTML(movie) {
             </div>`
 }
 
-renderMovies(search)
+if (resultsHeader) {
+    renderMovies(search)
+}
