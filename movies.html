@@ -45,6 +45,11 @@
     <section class="results">
         <div class="results__header">
             <div class="results__header--title">Search results: <span class="results__header--search highlight"></span></div>
+            <select name="" id="filter" onchange="filterMovies(event)">
+            <option value="" disabled selected>Sort by Year</option>
+            <option value="LOW_TO_HIGH">Year, Oldest to Newest</option>
+            <option value="HIGH_TO_LOW">Year, Newest to Oldest</option>
+            </select>
         </div>
         <div class="movies__list">
             <div class="highlight results__load--text hidden">Search a movie title to get started!</div>
