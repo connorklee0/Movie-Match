@@ -32,7 +32,7 @@ async function renderMovies(search) {
     searchInput.value = storedSearch;
     resultsHeader.innerHTML = `<span class="highlight">"${search}"</span>`;
     loadSpinner.classList.remove("hidden");
-    
+
     try {
         
         const response = await fetch(`http://www.omdbapi.com/?apikey=b77fdfec&s=${search}`);
@@ -49,7 +49,7 @@ async function renderMovies(search) {
 
         const firstSixMovies = moviesData.Search.slice(0, 6);
         const sortedMovies = sortMovies(firstSixMovies, storedFilter)
-        moviesList.innerHTML = firstSixMovies.map(movie => movieHTML(movie)).join("");
+        moviesList.innerHTML = sortedMovies.map(movie => movieHTML(movie)).join("");
 
     } catch (error) {
         moviesList.innerHTML = `<div class="highlight results__load--text">Failed to load movies. Try again.</div>`;
@@ -99,8 +99,6 @@ function movieHTML(movie) {
             </div>`
 }
 
-setTimeout(() => {
-    if (resultsHeader) {
-        renderMovies(search)
-    }
-});
+if (resultsHeader) {
+    renderMovies(search)
+}
