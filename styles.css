@@ -102,6 +102,7 @@ nav {
 .logo {
   font-size: 32px;
   color: var(--highlight);
+  cursor: pointer;
 }
 
 .nav__link--list {
