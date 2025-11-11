@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Movie</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+    <script src="https://kit.fontawesome.com/534270c367.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="landing">
+        <nav>
+        <div class="logo">Movie Match</div>
+        <ul class="nav__link--list">
+          <li class="nav__link link__hover-underline">
+            <aclass="nav__link--anchor" onclick="navigateHome()">Home</a>
+          </li>
+          <li class="nav__link link__hover-underline highlight">
+            <a class="nav__link--anchor" onclick="navigateSearch()">Find Movies</a>
+          </li>
+          <li class="nav__link">
+            <button class="nav__button" onclick="throwAlert()">Contact</button>
+          </li>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- SEARCH HEADER -->
+       <header class="header">
+            <h1 class="header--title title">
+                Browse <span class="highlight">Movies</span>
+            </h1>
+            <form id="search-bar" class="search--wrapper">
+                <input id="search--input" type="text" class="search" placeholder="Search by movie title">
+                <button class="search--submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+       </header>
+    </section>
+    <hr>
+
+
+    <section class="results">
+        <div class="results__header">
+            <div class="results__header--title">Search results: <span class="results__header--search highlight"></span></div>
+        </div>
+        <div class="movies__list">
+            <div class="highlight results__load--text hidden">Search a movie title to get started!</div>
+            <div class="results__status">
+                <i class="fa-solid fa-spinner results__loading--spinner hidden"></i>   
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>

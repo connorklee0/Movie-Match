@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Match</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./app.js" defer></script>
+    <script src="https://kit.fontawesome.com/534270c367.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section id="landing">
+        <nav>
+        <div class="logo">Movie Match</div>
+        <ul class="nav__link--list">
+          <li class="nav__link link__hover-underline highlight" >
+            <a class="nav__link--anchor" onclick="navigateHome()">Home</a>
+          </li>
+          <li class="nav__link link__hover-underline" >
+            <a class="nav__link--anchor" onclick="navigateSearch()">Find Movies</a>
+          </li>
+          <li class="nav__link">
+            <button class="nav__button" onclick="throwAlert()">Contact</button>
+          </li>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- HEADER -->
+       <header class="header">
+            <h1 class="header--title title">
+                Find Your <span class="highlight">Favorite Films</span>
+            </h1>
+            <div class="header--sub-title">
+                Movies at your fingertips
+            </div>
+            <form id="search-bar" class="search--wrapper" onsubmit="navigateSearch()">
+                <input id="search--input" type="text" class="search" placeholder="Search by movie title">
+                <button class="search--submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            <figure class="header__img--wrapper" >
+                <img src="./assets/header.png" alt="" class="header__img" draggable="false">
+            </figure>
+       </header>
+    </section>
+</body>
+</html>
