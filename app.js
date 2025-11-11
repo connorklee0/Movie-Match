@@ -7,6 +7,11 @@ const searchBar = document.getElementById('search-bar')
 const resultsHeader = document.querySelector('.results__header--search')
 const searchInput = document.getElementById('search--input')
 
+// navigation and alert
+const navigateHome = () => window.location.href = '/index.html';
+const navigateSearch = () => window.location.href = '/movies.html';
+const throwAlert = () => alert('Feature not yet implemented');
+
 searchBar.addEventListener('submit', (event) => {
     event.preventDefault();
     
@@ -57,18 +62,6 @@ function movieHTML(movie) {
                      Year: <span class="content">${movie.Year}</span>
                 </h4>
             </div>`
-}
-
-function navigateHome() {
-    window.location.href = `${window.location.origin}/index.html`
-}
-
-function navigateSearch() {
-    window.location.href = `${window.location.origin}/movies.html`
-}
-
-function throwAlert() {
-    alert('Feature has not been implemented')
 }
 
 renderMovies(search)
